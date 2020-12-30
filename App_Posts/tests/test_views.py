@@ -10,11 +10,11 @@ class TestViews(TestCase):
 
 
     def test_home_GET(self):
-    response = self.client.get(self.home_url)
-    self.assertEquals(response.status_code, 200)
-    self.assertTemplateUsed(response, 'App_Posts/home.html')  
+        response = self.client.get(self.home_url)
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'App_Posts/home.html')  
 
     def test_liked_GET(self):
-    response = self.client.get(self.liked_url)
-    self.assertEquals(response.status_code, 200)
-    self.assertTemplateUsed(response, 'App_Posts/navbar.html')      
+        response = self.client.get(self.liked_url)
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'App_Posts/navbar.html')      
